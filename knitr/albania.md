@@ -1,9 +1,14 @@
 ---
-output:
-  html_document: default
+layout: post
+title: Sample Post 2
+description: "render jekyll"
+modified: 2014-05-31
 ---
+
 Albania
 =============
+
+
 
 
 
@@ -22,7 +27,7 @@ Albania
 ![plot of chunk gendergap](figure/gendergap1.png) ![plot of chunk gendergap](figure/gendergap2.png) 
 
 
-```r
+{% highlight r %}
 .width = 1
 
 data_small <- 
@@ -57,6 +62,6 @@ ggplot(mapping = aes(x = OUTHOURS)) +
     
   ) +
   scale_colour_manual(values = c("#f4a582", "#92c5de")) + guides(colour = guide_legend(override.aes = list(alpha = 1)))
-```
+{% endhighlight %}
 
 ![plot of chunk another idea](figure/another idea.png) 
