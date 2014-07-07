@@ -51,3 +51,6 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: class
+
+include: [".htaccess"]
+exclude: ["LICENSE", "README.md", "knitr"]
