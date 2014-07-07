@@ -1,6 +1,7 @@
 title:            Home
 description:      ""
-url:              http://ALShum.github.io
+#url:              http://ALShum.github.io
+url:              ""
 
 # Owner/author information
 owner:
