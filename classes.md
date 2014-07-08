@@ -59,7 +59,6 @@ Algorithmic models of learning. Design, analysis, implementation and application
 <hr>
 
 #### Courses taken previously at [University of Hawaii](http://www.catalog.hawaii.edu/courses/description-index.htm).
-(Listed by course number; not in chronological order)
 
 ## Math
 <h6>MATH 301 Introduction to Discrete Mathematics</h6>
