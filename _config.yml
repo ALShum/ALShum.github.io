@@ -25,6 +25,12 @@ links:
     url: /about/
   - title: Posts
     url: /posts/
+  - title: Classes
+    url: /classes/
+  - title: Teaching
+    url: /teaching/
+  - title: Links
+    url: /links/
   - title: google
     url: http://www.google.com
     external: true
