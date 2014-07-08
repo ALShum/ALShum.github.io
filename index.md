@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 description: ""
 image:
   feature: texture-feature-05.jpg
