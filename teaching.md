@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /teaching/
-title: Teaching
+title: List of teaching and TA assignments.
 modified: 7-7-2014
 ---
 
-## List of teaching and TA assignments.
+## 
