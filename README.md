@@ -1,4 +1,4 @@
-Website using jekyll and the [minimal mistakes]{http://www.github.com/mmistakes} theme.
+[Website](http://ALShum.github.io) using jekyll and the [minimal mistakes](http://www.github.com/mmistakes) theme.  I modified the theme to remove a lot of features I will never use (disqus, some of the social media features and other features).  I also modified the background color to be grey; grey is awesome.
 
 
 ## License
