@@ -34,10 +34,9 @@
   {% include _author-bio.html %}
 </div>
 
-<!--
 <div id="index">
   <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
-  {% for post in site.posts limit:5 %}    
+  {% for post in site.posts limit:1 %}    
   <article>
     {% if post.link %}
       <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="icon-link"></i></h2>
@@ -47,7 +46,7 @@
     {% endif %}
   </article>
   {% endfor %}
-</div> -->
+</div> 
 <!-- /#index -->
 
 <div class="footer-wrap">
