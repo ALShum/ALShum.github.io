@@ -3,7 +3,7 @@ layout: home
 description: ""
 title: index title 
 image:
-  feature: texture-feature-05.jpg
+  feature: texture-feature-02.jpg
   credit: Texture Lovers
   creditlink: http://texturelovers.com
 ---

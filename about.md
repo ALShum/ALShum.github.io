@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /about/
-title: About the Theme
-modified: 9-9-2013
+title: About
+modified: 7-7-2014
 image:
-  feature: texture-feature-02.jpg
+  feature: texture-feature-03.jpg
   credit: Texture Lovers
   creditlink: http://texturelovers.com
 ---
