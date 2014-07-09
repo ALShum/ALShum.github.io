@@ -9,8 +9,7 @@ TBD
 
 <hr>
 
-#### Courses taken previously at [Iowa State University](http://catalog.iastate.edu/azcourses/).
-
+<h4> Courses taken previously at [Iowa State University](http://catalog.iastate.edu/azcourses/). </h4>
 ## Statistics
 <h6>STAT 500. Statistical Methods I.</h6>
 Analysis of data from designed experiments and observational studies. Randomization-based inference; inference on group means; nonparametric bootstrap; pairing/blocking and other uses of restricted randomization. Use of linear models to analyze data; least squares estimation; estimability; sampling distributions of estimators; general linear tests; inference for parameters and contrasts. Model assessment and diagnostics; remedial measures; alternative approaches based on ranks.
@@ -58,8 +57,7 @@ Algorithmic models of learning. Design, analysis, implementation and application
 
 <hr>
 
-#### Courses taken previously at [University of Hawaii](http://www.catalog.hawaii.edu/courses/description-index.htm).
-
+<h4> Courses taken previously at [University of Hawaii](http://www.catalog.hawaii.edu/courses/description-index.htm). </h4>
 ## Math
 <h6>MATH 301 Introduction to Discrete Mathematics</h6>
 <h6>MATH 302 Introduction to Differential Equations I</h6>
