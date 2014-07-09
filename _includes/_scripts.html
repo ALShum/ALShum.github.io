@@ -17,4 +17,52 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<script>
+// Dem sexy globals, mucking your namespace
+var oldColor = {},
+    newColor = {},
+    oldTime = 0,
+    colorInterval = 0,
+    oldColor = {r: 255, g: 255, b: 255},
+    newColor = {r: 255, g: 255, b: 255},
+    oldTime = new Date().getTime() / 1000,
+    colorInterval = 2.5;
+
+$().ready(function () {
+    var interpolateColor = function (s) {
+        var delta = (s - oldTime);
+        var progress = delta > 0 ? delta / colorInterval : 0;
+        var c = {};
+        var n = newColor;
+        var o = oldColor
+        c.r = ((n.r - o.r) * progress) + o.r;
+        c.g = ((n.g - o.g) * progress) + o.g;
+        c.b = ((n.b - o.b) * progress) + o.b;
+        return c;
+    };
+    var party = function () {
+        var s = new Date().getTime() / 1000;
+        var offsetMagnitude = 5 + (Math.sin(s * Math.PI / 4) * 3);
+        var xOffset = Math.sin(s * Math.PI) * offsetMagnitude;
+        var yOffset = Math.cos(s * Math.PI) * offsetMagnitude;
+        var c = interpolateColor(s);
+        var color = "rgb(" + Math.floor(c.r) + ", " + Math.floor(c.g) + ", " + Math.floor(c.b) + ")";
+        var prop = xOffset + "px " + yOffset + "px 4px " + color;        console.log(prop);
+        $('body').css("text-shadow", prop);
+    };
+
+    var changeColor = function () {
+        var c = {};
+        oldColor = newColor;
+        oldTime = new Date().getTime() / 1000;
+        c.r = Math.floor(Math.random() * 255);
+        c.g = Math.floor(Math.random() * 255);
+        c.b = Math.floor(Math.random() * 255);
+        newColor = c;
+    };
+
+    window.setInterval(party, 100);
+    window.setInterval(changeColor, colorInterval * 1000);
+});
+</script>
 {% endif %}
