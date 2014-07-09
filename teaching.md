@@ -8,11 +8,14 @@ modified: 7-7-2014
 <hr>
 
 #### Iowa State University
+
 ##### Instructor
+
 ###### STAT 101. Principles of Statistics. [Evaluations](not_posted_yet)
 Statistical concepts in modern society; descriptive statistics and graphical displays of data; the normal distribution; data collection (sampling and designing experiments); elementary probability; elements of statistical inference; estimation and hypothesis testing; linear regression and correlation; contingency tables.
 
 ##### Grader/TA
+
 ###### STAT 104. Introduction to Statistics.
 Statistical concepts and their use in science; collecting, organizing and drawing conclusions from data; elementary probability; binomial and normal distributions; regression; estimation and hypothesis testing. For students in the agricultural and biological sciences. 
 
@@ -28,6 +31,8 @@ Graduate students without an equivalent course should contact the department. Me
 <hr>
 
 #### University of Hawaii
+
 ##### Grader/TA
+
 ###### MATH 307 Linear Algebra and Differential Equations
 Introduction to linear algebra, application of eigenvalue techniques to the solution of differential equations.
