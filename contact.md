@@ -6,4 +6,4 @@ modified: 7-7-2014
 ---
 
 ## E-Mail
-ashum *AT* iastate .DOT. edu
+ashum \*AT\* iastate .DOT. edu
