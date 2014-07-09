@@ -8,5 +8,5 @@ image:
   creditlink: http://texturelovers.com
 ---
 
-## blah
-some stuff content
+## Alex Shum
+I am a graduate student in statistics at Iowa State University.

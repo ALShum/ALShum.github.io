@@ -9,7 +9,7 @@ modified: 7-7-2014
 
 #### Iowa State University
 ##### Instructor
-###### STAT 101. Principles of Statistics.
+###### STAT 101. Principles of Statistics. [Evaluations](not_posted_yet)
 Statistical concepts in modern society; descriptive statistics and graphical displays of data; the normal distribution; data collection (sampling and designing experiments); elementary probability; elements of statistical inference; estimation and hypothesis testing; linear regression and correlation; contingency tables.
 
 ##### Grader/TA

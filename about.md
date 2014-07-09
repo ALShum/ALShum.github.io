@@ -9,4 +9,8 @@ image:
   creditlink: http://texturelovers.com
 ---
 
-## About
+#### [CV/Resume](not_posted_yet)
+
+### Bio
+
+### Projects
