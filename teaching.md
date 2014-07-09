@@ -7,7 +7,8 @@ modified: 7-7-2014
 
 <hr>
 
-#### Iowa State University
+Iowa State University
+-------
 <h5>Instructor</h5>
 <h6>STAT 101. Principles of Statistics. [Evaluations](http://not_posted_yet) </h6>
 Statistical concepts in modern society; descriptive statistics and graphical displays of data; the normal distribution; data collection (sampling and designing experiments); elementary probability; elements of statistical inference; estimation and hypothesis testing; linear regression and correlation; contingency tables.
@@ -27,7 +28,8 @@ Graduate students without an equivalent course should contact the department. Me
 
 <hr>
 
-#### University of Hawaii
+University of Hawaii
+-------
 <h5> Grader/TA </h5>
 <h6> MATH 307 Linear Algebra and Differential Equations </h6>
 Introduction to linear algebra, application of eigenvalue techniques to the solution of differential equations.
