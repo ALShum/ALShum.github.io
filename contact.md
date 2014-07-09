@@ -1,9 +1,9 @@
 ---
 layout: page
 permalink: /contact/
-title: Contact
+title: Contact Information
 modified: 7-7-2014
-
 ---
 
-## Contact me
+## E-Mail
+ashum *AT* iastate .DOT. edu
