@@ -9,7 +9,7 @@ image:
   creditlink: http://texturelovers.com
 ---
 
-**[CV/Resume](not_posted_yet)**
+[CV/Resume](not_posted_yet)
 
 ### Bio
 
