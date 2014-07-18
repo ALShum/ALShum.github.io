@@ -8,3 +8,4 @@ text = text[-c(1:5, 19)]
 text = as.vector(do.call(cbind, strsplit(text, " ")))
 text = text[nchar(text) > 0]
 
+wordcloud(text)
