@@ -1,5 +1,6 @@
 ---
 layout: home
+permalink: /index/
 description: ""
 title: Alex Shum
 image:
