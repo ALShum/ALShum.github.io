@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /about/
 title: About
 modified: 7-7-2014
 image:
