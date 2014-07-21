@@ -22,7 +22,7 @@ google_verify:
 # For external links add external: true
 links:
   - title: About
-    url: /about/
+    url: /index/
   - title: Posts
     url: /posts/
   - title: Classes
