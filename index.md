@@ -1,15 +1,11 @@
 ---
-layout: page
-title: About
-modified: 7-7-2014
+layout: home
+description: ""
+title: Alex Shum
 image:
-  feature: texture-feature-03.jpg
+  feature: texture-feature-02.jpg
   credit: Texture Lovers
   creditlink: http://texturelovers.com
 ---
 
-[CV/Resume](not_posted_yet)
-
-### Bio
-
-### Projects
+I am a graduate student in statistics at Iowa State University.  
