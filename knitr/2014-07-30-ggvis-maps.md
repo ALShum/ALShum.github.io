@@ -7,6 +7,8 @@ modified: 2014-07-30
 
 This is a small example of plotting a map with ggvis similar to how you would plot a map on ggplot2.  The biggest upgrade is the interactivity possible with ggvis. 
 
+<br>
+
 If you run the following code into R or embed with shiny you can enable things like clicking.  The following code has clicking enabled; currently it doesn't do much except print lat/long and state name to console but this can be extended to interacting with other plots.
 
 {% highlight r %}
