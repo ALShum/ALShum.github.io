@@ -20,3 +20,5 @@ map_data %>% select(long, lat, group, order, region) %>%
   hide_legend("fill") %>% 
   handle_click(on_click = function(data, ...) {print(data)}) 
 {% endhighlight %}
+
+![](../images/ggvis_map/map.png)
