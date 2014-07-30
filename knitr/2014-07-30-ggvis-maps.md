@@ -4,15 +4,12 @@ title: Maps with ggvis
 description: "small example of maps with ggis"
 modified: 2014-07-30
 ---
-```{r knitr_options, echo=FALSE, include=FALSE}
-opts_chunk$set(fig.path = "../images/ggvis_maps")
-render_jekyll()
-#knit("2014-07-30-ggvis-maps.Rmd")
-```
+
 
 Small example of maps with ggvis.  Interactivity isn't enabled here on this static html page but if run thru R/shiny/Rmd document enables you to click states.  The clicking currently doesn't do much (just prints to console lat/long and state name).
 
-```{r maps, eval=FALSE}
+
+{% highlight r %}
 #interactive map with ggvis
 library(ggvis)
 library(dplyr)
@@ -25,4 +22,4 @@ map_data %>% select(long, lat, group, order, region) %>%
   handle_click(on_click = function(data, ...) {print(data)}) 
 
 #clicking on the map currently prints to console.  You can probably make something cooler.
-```
+{% endhighlight %}
