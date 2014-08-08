@@ -6,12 +6,12 @@ url:              http://www.alshum.com
 owner:
   name:           Alex Shum
   avatar:         bio-photo.jpg
-  bio:            "PhD Student in statistics at Iowa State University"
+  bio:            "PhD Student in statistics at Iowa State University.  Loves comic sans ms, blink html tags and vuvuzelas."
   email:          ashum @ iastate . edu
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter: NotAlexShum
   github: ALShum
-  stackoverflow:
+  stackoverflow: divide_by_zero
   linkedin:
 
 # Analytics and webmaster tools stuff goes here
