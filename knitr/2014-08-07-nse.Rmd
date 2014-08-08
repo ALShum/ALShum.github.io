@@ -10,7 +10,7 @@ render_jekyll()
 ```
 
 Non standard evaluation is one of the R language's strange features; I think it's stupid.  Here's some R code that evaluates as you would expect (in a sane way):
-```{r standard}
+```{r standard, tidy=FALSE}
 df = data.frame(a = "hello world", 
                 b = 5, c = FALSE, 
                 stringsAsFactors = FALSE)
@@ -36,12 +36,12 @@ f = function(x) deparse(substitute(x))
 `f(df$a)` = ``r deparse(substitute(df$b))`` <br>
 `f(df$a)` = ``r deparse(substitute(df$c))`` <br>
 
-Instead `substitute(x)` will capture the input as an expression without evaluating it and `deparse(x)` will turn this expression into a string.
-<br>
-Why is non-standard evaluation annoying?  If the non-standard evaluation version of `f(x)` is some important function I need to call but my input is stored in a data frame or list (as in the above example) then I'm going to have a bad day.
-<br>
-`library()` is an example of a real R function that uses non-standard evaluation.  `library(randomForest)` and `library("randomForest")` both evaluate correctly.  But if you have `string = "randomForst"`, then `library(string)` will try to load the "string" library.  This will come into play if you use something like the shiny package where a lot of input from the UI comes from `input$ui_object`.  See [this issue](https://groups.google.com/forum/#!topic/manipulatr/SBRIOQpAz_0) with shiny and non-standard evaluation.
-<br>
-Non-standard evaluation allows you to capture expressions and do things like avoid using quotations.  Are quotations really that much of a hassle to add to your code?  This is especially true for a language where the puritanical users prefer the `<-` assignment operator instead of `=`.  There are other uses as well involving names of columns in data frames and in plotting.  Do the non-evaluation shortcuts makeup for trying to get around non-evaluation issues when you absolutely need standard evaluation?
-<br>
+Instead `substitute(x)` will capture the input as an expression without evaluating it and `deparse(x)` will turn this expression into a string. <br>
+ 
+Why is non-standard evaluation annoying?  If the non-standard evaluation version of `f(x)` is some important function I need to call but my input is stored in a data frame or list (as in the above example) then I'm going to have a bad day. <br>
+ 
+`library()` is an example of a real R function that uses non-standard evaluation.  `library(randomForest)` and `library("randomForest")` both evaluate correctly.  But if you have `string = "randomForst"`, then `library(string)` will try to load the "string" library.  This will come into play if you use something like the shiny package where a lot of input from the UI comes from `input$ui_object`.  See [this issue](https://groups.google.com/forum/#!topic/manipulatr/SBRIOQpAz_0) with shiny and non-standard evaluation. <br>
+ 
+Non-standard evaluation allows you to capture expressions and do things like avoid using quotations.  Are quotations really that much of a hassle to add to your code?  This is especially true for a language where the puritanical users prefer the `<-` assignment operator instead of `=`.  There are other uses as well involving names of columns in data frames and in plotting.  Do the non-evaluation shortcuts makeup for trying to get around non-evaluation issues when you absolutely need standard evaluation? <br>
+ 
 I'm sure there's some clever hack to get around the non-standard evaluation in the above examples.  But this is still an annoying complication introduced by an advanced "feature".
