@@ -13,7 +13,7 @@ Here are some of my favorite things unrelated to math/statistics/computer scienc
 
 * Itoen [Oi Ocha](http://www.itoen.com/ready-to-drink/oi-ocha/oi-ocha-16-9-fl-oz-24-bottles-case) bottled green tea.
 
-* Scourges of the internet: <blink> html tags, comic sans ms font and low resolution jpegs/gifs.
+* Scourges of the internet: blink html tags, comic sans ms font and low resolution jpegs/gifs.
 
 * Admiral Ackbar
 
