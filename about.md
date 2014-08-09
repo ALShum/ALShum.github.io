@@ -15,7 +15,9 @@ image:
 I'm a PhD student in statistics at Iowa State University.  My interests are in machine learning, data mining, computational statistics, and data visualization.  Before I came to Iowa State University, I was briefly in the math program at the University of Hawaii at Manoa.  
 
 ### Hobbies and interests
-I like programming and problem solving.  I wrote a sudoku solver in java last year and I also wrote one in R a couple months ago.  I love weird data structures like kd-trees and bloom filters. 
+I like programming and weird data structures like kd-trees and bloom filters. 
+
+I wrote a sudoku solver in java last year and I also wrote one in R a couple months ago.
 
 ### Projects
 My [github](http://www.github.com/ALShum) has some of what I'm currently working on.
