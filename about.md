@@ -21,7 +21,11 @@ I like programming and problem solving.  I wrote a sudoku solver in java last ye
 My [github](http://www.github.com/ALShum) has some of what I'm currently working on.
 
 ### Books
-
+[List of books](http://amzn.com/w/2J5XOKS2XTJT7) that are on my list to read eventually.
 
 ### Contact
-Email is the best way to contact me: alex -AT- ALShum.com or ashum -AT- iastate.edu
+Email is the best way to contact me: 
+
+alex -AT- ALShum.com 
+
+ashum -AT- iastate.edu
