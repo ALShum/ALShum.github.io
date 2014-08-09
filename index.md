@@ -13,6 +13,8 @@ Here are some of my favorite things unrelated to math/statistics/computer scienc
 
 * Itoen [Oi Ocha](http://www.itoen.com/ready-to-drink/oi-ocha/oi-ocha-16-9-fl-oz-24-bottles-case) bottled green tea.
 
+* [Hedgehogs!] (http://www.telegraph.co.uk/news/picturegalleries/howaboutthat/10760008/In-pictures-The-many-faces-of-Marutaro-the-hedgehog.html?frame=2879441)
+
 * Scourges of the internet: blink html tags, comic sans ms font and low resolution jpegs/gifs.
 
 * Admiral Ackbar
