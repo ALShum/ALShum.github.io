@@ -6,24 +6,28 @@ modified: 7-7-2014
 ---
 <hr>
 
-#### Fall 2014 Courses -- still TBD, it will be a subset of the follow:
+#### Fall 2014 Courses -- still TBD, it will be a subset of the following:
 
 **COM S 511.  Design and Analysis of Algorithms**
 <br>
 A study of basic algorithm design and analysis techniques. Advanced data structures, amortized analysis and randomized algorithms. Applications to sorting, graphs, and geometry. NP-completeness and approximation algorithms.
 <br>
+
 **COM S 567. Bioinformatics I (Fundamentals of Genome Informatics).**
 <br>
 Biology as an information science. Review of algorithms and information processing. Generative models for sequences. String algorithms. Pairwise sequence alignment. Multiple sequence alignment. Searching sequence databases. Genome sequence assembly.
 <br>
+
 **COM S 572. Principles of Artificial Intelligence.**
 <br>
 Specification, design, implementation, and selected applications of intelligent software agents and multi-agent systems. Computational models of intelligent behavior, including problem solving, knowledge representation, reasoning, planning, decision making, learning, perception, action, communication and interaction. Reactive, deliverative, rational, adaptive, learning and communicative agents. Artificial intelligence programming. 
 <br>
+
 **STAT 554. Introduction to Stochastic Processes.**
 <br>
 Markov chains on discrete spaces in discrete and continuous time (random walks, Poisson processes, birth and death processes) and their long-term behavior. Optional topics may include branching processes, renewal theory, introduction to Brownian motion.
 <br>
+
 **STAT 641. Foundations of Probability Theory.**
 <br>
 Sequences and set theory; Lebesgue measure, measurable functions. Absolute continuity of functions, integrability and the fundamental theorem of Lebesgue integration. General measure spaces, probability measure, extension theorem and construction of Lebesgue-Stieljes measures on Euclidean spaces. Measurable transformations and random variables, induced measures and probability distributions. General integration and expectation, Lp-spaces and integral inequalities. Uniform integrability and absolute,continuity of measures. Probability densities and the Radon-Nikodym theorem. Product spaces and Fubini-Tonelli theorems.
