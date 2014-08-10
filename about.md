@@ -17,7 +17,7 @@ I'm a PhD student in statistics at Iowa State University.  My interests are in m
 ### Hobbies and interests
 I like programming and weird data structures like kd-trees and bloom filters. 
 
-I wrote a sudoku solver in java last year and I also wrote one in R a couple months ago.
+I think sudokus are awesome and I wrote a sudoku solver in java last year and I also wrote one in R a couple months ago -- they should be on my github somewhere.  I'm currently working on a solver for mathdoku and a sudoku solver using Knuth's algorithm X.
 
 ### Projects
 My [github](http://www.github.com/ALShum) has some of what I'm currently working on.
