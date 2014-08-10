@@ -17,9 +17,8 @@ Here are some of my favorite things unrelated to math/statistics/computer scienc
 
 * Scourges of the internet: blink html tags, comic sans ms font and low resolution jpegs/gifs.
 
-* Admiral Ackbar
-
-* ![Ice King](/images/Ice_King.png)
+* The ice king!
+![Ice King](/images/Ice_King.png)
 
 
 
