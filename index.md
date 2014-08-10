@@ -1,7 +1,7 @@
 ---
 layout: home
 description: ""
-title: Alex Shum
+title: Welcome
 image:
   feature: texture-feature-02.jpg
   credit: Texture Lovers
