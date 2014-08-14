@@ -4,9 +4,9 @@ permalink: /about/
 title: About
 modified: 7-7-2014
 image:
-  feature: texture-feature-03.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: feature-02.jpg
+  credit: ash
+  creditlink: https://www.flickr.com/photos/110510665@N05/
 ---
 
 [CV/Resume](/images/other/Shum_net.pdf)

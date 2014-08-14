@@ -4,8 +4,8 @@ description: ""
 title: Welcome
 image:
   feature: feature-01.jpg
-  credit: Text
-  creditlink: http://testtest
+  credit: Ash
+  creditlink: https://www.flickr.com/photos/110510665@N05/
 ---
 Hi, my name is Alex.  I'm a graduate student in statistics at Iowa State University.  You can find more info and how to contact me [here](/about/).  I also have random [posts](/posts/) about statistics and programming; this is mainly so I don't forget things!
 
