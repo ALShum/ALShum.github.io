@@ -3,9 +3,9 @@ layout: home
 description: ""
 title: Welcome
 image:
-  feature: texture-feature-02.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: feature-01.jpg
+  credit: Text
+  creditlink: http://testtest
 ---
 Hi, my name is Alex.  I'm a graduate student in statistics at Iowa State University.  You can find more info and how to contact me [here](/about/).  I also have random [posts](/posts/) about statistics and programming; this is mainly so I don't forget things!
 
