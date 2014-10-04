@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Maps with ggvis
-description: "small example of maps with ggis"
+description: "small example of maps with ggvis"
 modified: 2014-07-30
 ---
 
