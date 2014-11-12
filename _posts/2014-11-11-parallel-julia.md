@@ -148,3 +148,17 @@ The problem with the above is that each process will have a separate copy of ``a
 
 #####Short note on distributed arrays and shared arrays
 Distributed arrays are large arrays where each processes has access to a subset of the array.  Shared arrays are arrays where each process has access to the entire array.  
+
+Comparisons with R
+------------------
+Running the same process to calculate pi.  The follow is a vectorized R implementation.  Unfortunately running for the full 200,000,000 iterations yields an error a memory allocation error in R.  Running it instead for 70,000,000 iterations R takes ~8 seconds.  Julia does the same calculation in ~3.2 and ~1.7 seconds for iterative and parallel solutions.
+
+{% highlight r %}
+start = proc.time()
+numIter = 200000000
+rand_coords = matrix(runif(2 * numIter, 0, 1)^2, ncol = 2)
+num_in_circle = sum(rand_coords[,1] + rand_coords[,2] < 1)
+ans = 4 * num_in_circle / numIter
+print(proc.time() - start)
+print(ans)
+{% endhighlight %}

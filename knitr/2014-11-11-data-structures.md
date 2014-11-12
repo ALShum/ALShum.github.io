@@ -4,10 +4,7 @@ title: "Solving problems with data structures in Julia"
 description: "Maps in Julia and R"
 modified: "2014-11-11"
 ---
-```{r knitr_options, echo=FALSE, include=FALSE}
-render_jekyll()
-#knit("2014-11-11-data-structures.Rmd")
-```
+
 
 A lot of programming problems can be solved simply using the correct datastructures.  In the process of learning Julia we review some data structures in Julia to solve some problems.  The following is a solution to project euler [problem 17](https://projecteuler.net/problem=17).
 
@@ -79,18 +76,39 @@ print(sum)
 All we do here is have a dictionary to map the numbers to their english equivalent.  After defining the a few base numbers in the dictionary we can build strings for every other number.  The spaces are removed from the words simply because the problem description says not to count the spaces.  
 
 The standard data structures available in Julia are quite nice.  This example is a problem that can be solved quite easily with a map.  This example was chosen because coming from R there is no equivalent data structure.  The closest data structures are environments and lists in R.  However, for a lot of uses environments and lists don't quite act in the same way as a dictionary or map.
-```{r list_ex}
+
+{% highlight r %}
 num2string = list()
 num2string[1] = "one"
 num2string[5] = "five"
 print(num2string)
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## [[1]]
+## [1] "one"
+## 
+## [[2]]
+## NULL
+## 
+## [[3]]
+## NULL
+## 
+## [[4]]
+## NULL
+## 
+## [[5]]
+## [1] "five"
+{% endhighlight %}
 Using a list to build a map from integers to strings it looks like it unnecessarily fills in all the values inbetween 1 and 5 with NAs.  So if I have gaps in the domain of my map the list will automatically fill them in.
 
 I could try to do the same thing with environments:
-```{r env}
+
+{% highlight r %}
 num2string = new.env()
 num2string$`1` = "one"
 num2string$`5` = "five"
-```
+{% endhighlight %}
 The problem with environments is that you cannot index with integers.  To map integers to strings the best you can do is cast integers to strings and map strings to strings.
