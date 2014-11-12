@@ -37,6 +37,10 @@ function iterative_solver(n)
   end
   return(K)
 end
+
+tic()
+indmax(iterative_solver(1000000))
+toc()
 {% endhighlight %}
 
 {% highlight julia %}
