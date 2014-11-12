@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Memoization and Recursion"
+description: "Memoization in R"
+author: "alex shum"
+modified: 2014-10-30
+---
+```{r knitr_options, echo=FALSE, include=FALSE}
+render_jekyll()
+#knit("2014-10-30-memoization.Rmd")
+```
+
+This week [Sam Helmich](https://twitter.com/SamHelmich) reminded me that I have an old project euler account.  It turns out that I managed to solve about 20 problems on there about three years ago before I forgot about it.  So now I'm going to go back where I left off.  The following is a problem from project euler:
+
+> The following iterative sequence is defined for the set of positive integers:
+> 
+> n ??? n/2 (n is even)
+> n ??? 3n + 1 (n is odd)
+> 
+> Using the rule above and starting with 13, we generate the following sequence:
+> 
+> 13 ??? 40 ??? 20 ??? 10 ??? 5 ??? 16 ??? 8 ??? 4 ??? 2 ??? 1
+> It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
+> 
+> Which starting number, under one million, produces the longest chain?
+> 
+> NOTE: Once the chain starts the terms are allowed to go above one million.
+
+I don't think this problem is terribly difficult and if you're looking for a tl;dr I think the trick is to just use memoization.  Here is a basic summary with code in R.  First to calculate 
+```{r memo1}
+collatz_sequence_length = function(n) {
+  count = 1
+  while(n != 1) {
+    if(n %% 2 == 0) n = n/2
+    else n = 3*n + 1
+    
+    count = count + 1
+  }
+  return(count)
+}
+```

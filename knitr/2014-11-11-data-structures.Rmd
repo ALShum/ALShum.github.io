@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Adv. data structures in Julia"
+description: "Maps and bloom filters"
+modified: "2014-11-11"
+---
+Julia 
