@@ -31,7 +31,7 @@ Note: becareful about how many times you run ``addprocs`` inside a Julia session
 ![workers](../images/parallel/julia_workers.png)
 
 Here are a few other ways to remote call:
-{% highlight r %}
+{% highlight julia %}
 #call and fetch in one statement
 #you don't need to save a reference this way
 remotecall_fetch(4, rand, 2, 2)
@@ -43,7 +43,7 @@ m2 = @spawn rand(3,3)
 You can also use macros to ``remotecall`` commands; this allows you to pass an expression instead of a function.
 
 Remember that each process has a separate memory domain.  If you generate results on one process you need to be careful about how to access the results on another process:
-{% highlight r %}
+{% highlight julia %}
 #matrix is created on process 3
 big_matrix = @spawnat 2 rand(100, 100)
 
@@ -58,17 +58,17 @@ Since each process has its own memory when you call ``fetch`` you are explicitly
 
 When you spawn processes you will need to be careful as well.  Julia hides a lot of bookkeeping for a lot of the parallel processing backend but you can still end up doing something stupid:
 
-{% highlight r %}
+{% highlight julia %}
 message = "This string is constructed locally"
 shouting_message = @spawn uppercase(message)
 {% endhighlight %}
 The locally constructed string now needs to be sent to one of the worker processes; this creates more work since the data needs to be sent between processes.  In the above example a string is constructed locally and sent to another process.  Both of these operations should be done on the same remote process:
-{% highlight r %}
+{% highlight julia %}
 @spawn lowercase("YOU CAN NEVER HAVE TOO MANY COOKS!")
 {% endhighlight %}
 
 For writing functions the ``@everywhere`` tag will insure that all the processes have access to the function.  This will define the function on all processes.  If you don't do this then you will get an error message about the function not being defined on the remote process.
-{% highlight r %}
+{% highlight julia %}
 function adjective()
   adj = ["algebraic!", "redododiculous"]
   return(adj[rand(1:2)])
@@ -93,7 +93,7 @@ The above was a brief demonstration for how Julia handles parallelization in the
 ``pmap`` is similar to ``sapply`` in R.  ``pmap(fn, input)`` will run the function for each element of the input.  ``pmap`` is optimized for situations where each function call does a large amount of work.  Let's look at an example of something written without parallelization and similar code written using ``pmap``.
 
 The following is some code to calculate pi from random numbers: generate unif(0, 1) x unif(0, 1) and calculate the proportion such that x^2 + y^2 < 1.
-{% highlight r %}
+{% highlight julia %}
 tic()
 numIter = 200000000 
 rand_coords = rand(numIter, 2) .^ 2
@@ -103,7 +103,7 @@ toc()
 print(ans)
 {% endhighlight %}
 For 200,000,000 iterations it takes my computer ~55 seconds to calculate pi as above.  Below is a rewrite of the code to take advantage of parallelization using ``pmap``:
-{% highlight r %}
+{% highlight julia %}
 addprocs(3)
 @everywhere function circle_number(numIter)
   rand_coords = rand(numIter, 2) .^ 2
@@ -121,7 +121,7 @@ print(ans)
 Instead of running all 200,000,000 iterations together the above code splits the number of iterations into 4 equal segments and runs them in parallel.  The above code executed in ~27 seconds on my desktop.  It uses four processes and is about twice as fast; parallelization has a bit of overhead.
 
 ``@parallel`` is for parallelizing loops.  Iterations will run independently over different processes and the results will be combined at the end (uses the map-reduce concept).  Unlike ``pmap``, ``@parallel`` is used for functions that are inexpensive to calculate.  In order to use ``@parallel`` a correct "reduce" operation must be specified.  Here is code to calculate pi using a parallel loop:
-{% highlight r %}
+{% highlight julia %}
 tic()
 numIter = 200000000
 in_circle = @parallel (+) for i = 1:numIter
@@ -133,7 +133,7 @@ print(4 * in_circle / numIter)
 The above code takes ~27 seconds to execute on my desktop.  Note here this iterative approach has similar performance to the above parallelization using ``pmap``.  Unlike what you would see in R code written iteratively will have similar performance.
 
 Caution should be used for this approach; unlike in a normal iterative loop, the iterations will not have a specified order.  The following code will not work as expected.  
-{% highlight r %}
+{% highlight julia %}
 a = zeros(100000)
 @parallel for i=1:100000
   a[i] = i
