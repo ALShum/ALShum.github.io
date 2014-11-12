@@ -1,23 +1,20 @@
 ---
 layout: post
 title: "Memoization and Recursion"
-description: "Memoization in R"
+description: "Memoization"
 author: "alex shum"
 modified: 2014-11-11
 ---
-```{r knitr_options, echo=FALSE, include=FALSE}
-render_jekyll()
-#knit("2014-10-30-memoization.Rmd")
-```
+
 
 > The following iterative sequence is defined for the set of positive integers:
 > 
-> n ??? n/2 (n is even)
-> n ??? 3n + 1 (n is odd)
+> n -> n/2 (n is even)
+> n -> 3n + 1 (n is odd)
 > 
 > Using the rule above and starting with 13, we generate the following sequence:
 > 
-> 13 ??? 40 ??? 20 ??? 10 ??? 5 ??? 16 ??? 8 ??? 4 ??? 2 ??? 1
+> 13 -> 40 -> 20 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
 > It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
 > 
 > Which starting number, under one million, produces the longest chain?
