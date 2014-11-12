@@ -16,7 +16,7 @@ By default Julia uses just a single process.  To start Julia with multiple proce
 
 The lower level functions for parallel processing are ``remotecall(p, fn, ...)`` where ``p`` is the worker and ``fn`` is the function to run followed by additional parameters.
 
-{% highlight r %}
+{% highlight julia %}
 #add 3 workers
 addprocs(3)
 
