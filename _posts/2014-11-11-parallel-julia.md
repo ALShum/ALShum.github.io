@@ -16,14 +16,15 @@ By default Julia uses just a single process.  To start Julia with multiple proce
 
 The lower level functions for parallel processing are ``remotecall(p, fn, ...)`` where ``p`` is the worker and ``fn`` is the function to run followed by additional parameters.
 
-```
+{% highlight r %}
 #add 3 workers
 addprocs(3)
 
 #run a command on a different worker
 rmatrix = remotecall(4, rand, 2, 2)
 print(rmatrix)
-```
+{% endhighlight %}
+
 The remote call will run ``rand(2,2)`` on process 4.  What is actually returned from this command?  If you print it you should see something like ``RemoteRef(4,1,10)``.  Instead of returning a matrix object, ``remotecall`` will return a reference to the memory location associated with this processor.  To actually get the results use the ``fetch`` function.
 
 Note: becareful about how many times you run ``addprocs`` inside a Julia session:
