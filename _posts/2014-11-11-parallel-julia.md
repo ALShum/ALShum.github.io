@@ -61,10 +61,15 @@ When you spawn processes you will need to be careful as well.  Julia hides a lot
 {% highlight julia %}
 message = "This string is constructed locally"
 shouting_message = @spawn uppercase(message)
+
+big_matrix = rand(10000,10000)
+@spawn big_matrix .+ pi
 {% endhighlight %}
-The locally constructed string now needs to be sent to one of the worker processes; this creates more work since the data needs to be sent between processes.  In the above example a string is constructed locally and sent to another process.  Both of these operations should be done on the same remote process:
+The locally constructed variables now needs to be sent to one of the worker processes; this creates more work since the data needs to be sent between processes.  In the above example a string is constructed locally and sent to another process.  Both examples above should be rewritten so that these operations are done on the same remote process:
 {% highlight julia %}
 @spawn lowercase("YOU CAN NEVER HAVE TOO MANY COOKS!")
+
+@spawn rand(10000,10000) .+ pi
 {% endhighlight %}
 
 For writing functions the ``@everywhere`` tag will insure that all the processes have access to the function.  This will define the function on all processes.  If you don't do this then you will get an error message about the function not being defined on the remote process.
