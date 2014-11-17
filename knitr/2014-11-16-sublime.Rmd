@@ -14,9 +14,9 @@ Summary of steps to setup sublime for use with R, Python, Java and C.
 Command Line
 ------------
 For OS X, to work with files on the command line:
-```
+{% highlight code %}
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/usr/bin/subl
-```
+{% endhighlight %}
 Then to open text files: ```subl file.txt```.
 
 Finally edit ```.profile```.  and add ```export EDITOR='subl -w'```.  This will specify to use sublime for commands that prompt for input.
@@ -27,9 +27,9 @@ The command to install package control might change with later versions.  See [h
 
 To install package control for sublime open the console with ``ctrl + (`)`` and paste the following python code:
 
-```
+{% highlight code %}
 import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
-```
+{% endhighlight %}
 
 Interpreted languages
 ---------------------------
@@ -38,7 +38,7 @@ Interpreted languages
 To open an instance of python/r open the command palette and find SublimeREPL: Python or SublimeREPL: R.  This will open a python/R console inside sublime.
 
 It might be helpful to change the key bindings to send code to R/python code directly to the interpreter.  Key bindings can be found using the command palette or under preferences.  
-```
+{% highlight code %}
 // Executes a selection of text in REPL
 { "keys": ["control+shift+j"], "command": "repl_transfer_current", "args": {"scope": "selection"}},
 
@@ -47,11 +47,11 @@ It might be helpful to change the key bindings to send code to R/python code dir
    
 // Executes line(s) of text in REPL terminal
 { "keys": ["control+shift+l"], "command": "repl_transfer_current", "args": {"scope": "lines"}}
-```
+{% endhighlight %}
 The above code will send and execute a code selection, the entire file and a line of code respectively.  It's possible to send the code without executing by including ```"action":"view_write"``` under args.  Example:
-```
+{% highlight code %}
 { "keys": ["control+shift+j", "r"], "command": "repl_transfer_current", "args": {"scope": "selection", "action":"view_write"}}
-```
+{% endhighlight %}
 
 Linking with R
 --------------
@@ -60,16 +60,16 @@ Install R-box using command palette.  REPL links sublime to R but the R-Box pack
 Compiled languages
 ------------------
 Sublime has an extendable build system.  It's possible to compile a language with ```command + b``` and compile and run a language with ```command + shift + b```.  To add a new build system, go to tool > build system > new build system.  The following will add C to the build system:
-```
+{% highlight code %}
 {
   "cmd" : ["gcc $file_name -o ${file_base_name} && ./${file_base_name}"],
 	"selector" : "source.c",
 	"shell": true,
 	"working_dir" : "$file_path"
 }
-```
+{% endhighlight %}
 The following will add C to the build system and allow for both compile only and compile/run in a single key combination.
-```
+{% highlight code %}
 {
   "cmd" : ["gcc", "-o", "$file_base_name", "$file_name"],
 	"selector" : "source.c",
@@ -84,7 +84,7 @@ The following will add C to the build system and allow for both compile only and
 		}
 	]
 }
-```
+{% endhighlight %}
 
 Sublime over SSh
 ----------------
