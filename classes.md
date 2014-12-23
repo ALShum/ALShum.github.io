@@ -2,37 +2,15 @@
 layout: page
 permalink: /classes/
 title: A list of Stat/Math/CS courses
-modified: 7-7-2014
+modified: 12-22-2014
 ---
 <hr>
 
-#### Fall 2014 Courses -- still TBD, it will be a subset of the following:
+#### Spring 2015 Courses:
+**STAT 601**
+**STAT 602**
+**COM S 555**
 
-**COM S 511.  Design and Analysis of Algorithms**
-<br>
-A study of basic algorithm design and analysis techniques. Advanced data structures, amortized analysis and randomized algorithms. Applications to sorting, graphs, and geometry. NP-completeness and approximation algorithms.
-<br>
-
-**COM S 567. Bioinformatics I (Fundamentals of Genome Informatics).**
-<br>
-Biology as an information science. Review of algorithms and information processing. Generative models for sequences. String algorithms. Pairwise sequence alignment. Multiple sequence alignment. Searching sequence databases. Genome sequence assembly.
-<br>
-
-**COM S 572. Principles of Artificial Intelligence.**
-<br>
-Specification, design, implementation, and selected applications of intelligent software agents and multi-agent systems. Computational models of intelligent behavior, including problem solving, knowledge representation, reasoning, planning, decision making, learning, perception, action, communication and interaction. Reactive, deliverative, rational, adaptive, learning and communicative agents. Artificial intelligence programming. 
-<br>
-
-**STAT 554. Introduction to Stochastic Processes.**
-<br>
-Markov chains on discrete spaces in discrete and continuous time (random walks, Poisson processes, birth and death processes) and their long-term behavior. Optional topics may include branching processes, renewal theory, introduction to Brownian motion.
-<br>
-
-**STAT 641. Foundations of Probability Theory.**
-<br>
-Sequences and set theory; Lebesgue measure, measurable functions. Absolute continuity of functions, integrability and the fundamental theorem of Lebesgue integration. General measure spaces, probability measure, extension theorem and construction of Lebesgue-Stieljes measures on Euclidean spaces. Measurable transformations and random variables, induced measures and probability distributions. General integration and expectation, Lp-spaces and integral inequalities. Uniform integrability and absolute,continuity of measures. Probability densities and the Radon-Nikodym theorem. Product spaces and Fubini-Tonelli theorems.
-
-<hr>
 
 Courses taken previously at [Iowa State University](http://catalog.iastate.edu/azcourses/).
 -------
@@ -91,6 +69,14 @@ An object-oriented approach to data structures and algorithms. Object-oriented a
 **COM S 311. Design and Analysis of Algorithms.**
 <br>
 Basic techniques for design and analysis of efficient algorithms. Sorting, searching, graph algorithms, computational geometry, string processing and NP-completeness. Design techniques such as dynamic programming and the greedy method. Asymptotic, worst-case, average-case and amortized analyses. Data structures including heaps, hash tables, binary search trees and red-black trees. Programming projects.  
+<br>
+**COM S 511.  Design and Analysis of Algorithms**
+<br>
+A study of basic algorithm design and analysis techniques. Advanced data structures, amortized analysis and randomized algorithms. Applications to sorting, graphs, and geometry. NP-completeness and approximation algorithms.
+<br>
+**COM S 572. Principles of Artificial Intelligence.**
+<br>
+Specification, design, implementation, and selected applications of intelligent software agents and multi-agent systems. Computational models of intelligent behavior, including problem solving, knowledge representation, reasoning, planning, decision making, learning, perception, action, communication and interaction. Reactive, deliverative, rational, adaptive, learning and communicative agents. Artificial intelligence programming. 
 <br>
 **COM S 573. Machine Learning.**
 <br>
