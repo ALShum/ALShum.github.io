@@ -1,0 +1,99 @@
+---
+title: "2015-01-26-python"
+author: "alex shum"
+date: "Monday, January 26, 2015"
+output: html_document
+---
+
+Simple introduction to Python from R
+====================================
+An introduction to objects and object oriented programming in python for users familiar with R.
+
+
+S3, S4, Reference Classes
+----------------
+```
+class1 = structure(list(string = "ARDKFJSLD"), class = "test")
+
+print.test = function(x) {
+  x$string
+}
+
+mean.test = function(x) {
+  "testtesttest"
+}
+
+print(class1)
+mean(class1)
+```
+S3 and S4 objects have the property that the object itself and the methods for that object are separate.
+
+
+
+```
+class2 = setRefClass("test2", 
+                      fields = c("string", "number"),
+                      methods = list(
+                        print = function() {
+                          string
+                        },
+                        
+                        getNumber = function() {
+                          number
+                        }
+                      ))
+                      
+example = class2$new(string = "test", number = 5)
+example$print()
+example$getNumber()
+```
+
+Classes and Modules in Python
+=============================
+Modules are files which contain python statements.  This can contain classes, functions and global variables.  Packages are a collection of modules.
+
+```
+#stuff.py
+#function:
+def cheeseburger():
+  print("delicious")
+  
+#variables:
+rabbits = "delicious!"
+
+#classes
+class Point:
+  """A simple class for a point in 2d space"
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+```
+
+Classes have special functions denoted surrounded by __.  One such example is the constructor ```___init___()```.  This function will run when the class is initialized.
+
+```
+#example class
+class Drugs:
+  status = "unknown"
+  
+  def __init__(self, name, price):
+    self.name = name
+    self.price = price
+  
+  def changePrice(self, price):
+    self.price = price
+```
+
+This is an example class.  Below are two classes that inherit from this class.
+```
+class PCP(Drugs):
+  status = "illegal"
+```
+
+```
+class Aspirin(Drugs):
+  status = "legal"
+  
+  def isPatented(self):
+    return(false)
+```
