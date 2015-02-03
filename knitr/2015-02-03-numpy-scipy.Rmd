@@ -73,3 +73,22 @@ append(a1, [[5],[6],[7]], axis = 1) #cbind
 ```
 For append note that difference between adding a column and adding a row.
 
+Indexing arrays/matrices with conditions
+----------------------------------------
+```
+from numpy import * 
+a1 = array([1,2,3,4])
+
+#return a array of booleans 
+a1 > 1
+
+#finding index positions given a condition
+where(a1 > 1)
+
+#subsetting arrays using conditions
+a1[a1 > 1]
+a1[where(a1 > 1)]
+
+```
+Arrays can be indexed with both sequences of index positions and booleans.  This also allows us to subset arrays/matrices using inequalities and other conditions.  Same lessons apply to matrices.
+
