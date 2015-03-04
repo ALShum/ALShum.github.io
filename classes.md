@@ -9,7 +9,7 @@ modified: 12-22-2014
 #### Spring 2015 Courses:
 **STAT 601**
 **STAT 602**
-**COM S 555**
+**COM S 535**
 
 
 Courses taken previously at [Iowa State University](http://catalog.iastate.edu/azcourses/).
