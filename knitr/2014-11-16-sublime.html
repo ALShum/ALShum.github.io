@@ -60,16 +60,14 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <p>Summary of steps to setup sublime for use with R, Python, Java and C.</p>
 <div id="command-line" class="section level2">
 <h2>Command Line</h2>
-<p>For OS X, to work with files on the command line:</p>
-<pre><code>ln -s &quot;/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl&quot; ~/usr/bin/subl</code></pre>
-<p>Then to open text files: <code>subl file.txt</code>.</p>
+<p>For OS X, to work with files on the command line: {% raw %} ln -s “/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl” ~/usr/bin/subl {% endraw %} Then to open text files: <code>subl file.txt</code>.</p>
 <p>Finally edit <code>.profile</code>. and add <code>export EDITOR='subl -w'</code>. This will specify to use sublime for commands that prompt for input.</p>
 </div>
 <div id="package-control" class="section level2">
 <h2>Package Control</h2>
 <p>The command to install package control might change with later versions. See <a href="https://sublime.wbond.net/installation#Simple">here</a>.</p>
 <p>To install package control for sublime open the console with <code>ctrl + (`)</code> and paste the following python code:</p>
-<pre><code>import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)</code></pre>
+<p>{% raw %} import urllib.request,os,hashlib; h = ‘7183a2d3e96f11eeadd761d777e62404’ + ‘e330c659d4bb41d3bdf022e94cab3cd0’; pf = ‘Package Control.sublime-package’; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( ‘<a href="http://packagecontrol.io/">http://packagecontrol.io/</a>’ + pf.replace(‘’, ‘%20’)).read(); dh = hashlib.sha256(by).hexdigest(); print(‘Error validating download (got %s instead of %s), please try manual install’ % (dh, h)) if dh != h else open(os.path.join( ipp, pf), ‘wb’ ).write(by) {% endraw %}</p>
 </div>
 <div id="interpreted-languages" class="section level2">
 <h2>Interpreted languages</h2>
@@ -81,7 +79,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 // Executes the entire file (build) in REPL
 { &quot;keys&quot;: [&quot;control+shift+k&quot;], &quot;command&quot;: &quot;repl_transfer_current&quot;, &quot;args&quot;: {&quot;scope&quot;: &quot;file&quot;}},
-
+   
 // Executes line(s) of text in REPL terminal
 { &quot;keys&quot;: [&quot;control+shift+l&quot;], &quot;command&quot;: &quot;repl_transfer_current&quot;, &quot;args&quot;: {&quot;scope&quot;: &quot;lines&quot;}}</code></pre>
 <p>The above code will send and execute a code selection, the entire file and a line of code respectively. It’s possible to send the code without executing by including <code>&quot;action&quot;:&quot;view_write&quot;</code> under args. Example:</p>
