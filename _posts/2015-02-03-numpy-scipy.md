@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Numpy and Scipy Super Simple Examples"
+description: "Numpy-Scipy examples"
+author: "alex shum"
+modified: 2015-01-26
+---
+
 Numpy and Scipy Super Simple Examples
 =====================================
 Some examples of using numpy and scipy coming from R.  Generally numpy will contain the data structures for vectors and matrices.  Scipy will contain the linear algebra and other numerical algorithms.  Due to compatability issues some linear algebra functions that would be better under scipy are also contained under numpy.
