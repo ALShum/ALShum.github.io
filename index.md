@@ -15,7 +15,7 @@ Here are some of my favorite things unrelated to math/statistics/computer scienc
 
 * [Hedgehogs!](http://www.telegraph.co.uk/news/picturegalleries/howaboutthat/10760008/In-pictures-The-many-faces-of-Marutaro-the-hedgehog.html?frame=2879441)
 
-* Scourges of the internet: blink html tags, comic sans ms font and low resolution jpegs/gifs.
+* Blink html tags, comic sans ms font and gifs in place of video.
 
 * The ice king!
 ![Ice King](/images/Ice_King.png)
