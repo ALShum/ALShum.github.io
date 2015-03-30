@@ -15,7 +15,7 @@ image:
 I'm a PhD student in statistics at Iowa State University.  My interests are in machine learning, data mining, computational statistics, and data visualization.  Before I came to Iowa State University, I was briefly in the math program at the University of Hawaii at Manoa.  
 
 ### Hobbies and interests
-I like programming and [puzzles](http://projecteuler.net).  I think sudokus are awesome; I always try to write a sudoku solver in languages I'm learning.  I've previously written a sudoku solver in Java, R, C, Julia and Matlab.  
+I like programming and [puzzles](http://projecteuler.net).  I think sudokus are awesome; I always try to write a sudoku solver in languages I'm learning.  I've previously written a sudoku solver in Java, R, C, Julia and Matlab.  Sometimes I also answer questions on [stackoverflow](http://stackoverflow.com/users/3738857/divide-by-zero)
 
 ### Projects
 My [github](http://www.github.com/ALShum) has some of what I'm currently working on.
