@@ -3,7 +3,7 @@ layout: post
 title: "Useful Shiny Tips"
 description: "Shiny functionality with action buttons, dynamic UI and cleanup"
 author: "alex shum"
-modified: 2015-02-03
+modified: 2015-07-22
 ---
 
 # Some Basic R Shiny Tasks
