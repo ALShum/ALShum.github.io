@@ -12,7 +12,7 @@ modified: 2015-02-03
 It's not always helpful to have your reactive functions update right away.  Sometimes the function may depend on user input, an API call, or the function just might be slow.  In those cases it might be helpful to delay updating a reactive until an `actionButton` is pressed.
 
 
-```r
+```
 #app.r
 
 server = function(input, output) {
@@ -40,7 +40,7 @@ shinyApp(ui = ui, server = server)
 Sometimes an `actionButton` is used in conjunction with internal storage:
 
 
-```r
+```
 #app.r
 
 server = function(input, output) {
@@ -74,7 +74,7 @@ One possible use case is when using a Shiny app in communicating with an externa
 Reactive UI elements built from Shiny input or data.
 
 
-```r
+```
 #app.r
 
 server = function(input, output) {
@@ -101,7 +101,7 @@ shinyApp(ui = ui, server = server)
 In case you need to close connections or other cleanup tasks after Shiny app shutsdown.
 
 
-```r
+```
 #add this to your server function
 session$onSessionEnded(function() {
 	cleanup()
