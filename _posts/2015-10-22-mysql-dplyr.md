@@ -16,9 +16,9 @@ To start download the [Movie Lens Dataset](http://grouplens.org/datasets/moviele
 
 Install MySQL with homebrew on OS X:
 
-{% highlight %}
+```
 brew install mysql
-{% endhighlight %}
+```
 
 Install MySQL with apt on Ubuntu:
 
