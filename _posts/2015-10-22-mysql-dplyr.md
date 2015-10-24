@@ -184,23 +184,22 @@ LIMIT 10;
 
 Once the databases are created and the data is in the database correctly, from R install `dplyr` and `RMySQL`.  Then enter the following commands to connect `dplyr` to the databased just created:
 
-```r
+{% highlight r %}
 library(dplyr)
 db = src_mysql('my_db_name', host = 'localhost', user='root', password='PASSWORD')
 
 movies = tbl(db, "movies")
 ratings = tbl(db, "ratings")
 users = tbl(db, "users")
-```
+{% endhighlight %}
 
 At this point can can treat the three databases as R dataframes. 
 
-```
+{% highlight r %}
 movies %>% left_join(ratings)
-```
-
+{% endhighlight %}
 
 Important links:
-* https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial
-* http://stackoverflow.com/questions/20411440/incorrect-string-value-xf0-x9f-x8e-xb6-xf0-x9f-mysql
-* http://www.mysqltutorial.org/import-csv-file-mysql-table/
+1. https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial
+2. http://stackoverflow.com/questions/20411440/incorrect-string-value-xf0-x9f-x8e-xb6-xf0-x9f-mysql
+3. http://www.mysqltutorial.org/import-csv-file-mysql-table/
