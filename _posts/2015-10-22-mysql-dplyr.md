@@ -6,7 +6,6 @@ author: "alex shum"
 modified: 2015-10-22
 ---
 
-
 One of the best features of `dplyr` is that it allows you to rearrange and summarize data from different sources using the same functions.  Data read in from text/csv and data read in from a database can be treated similarly.  If a dataset is too large to load into memory putting it into a database and using familiar `dplyr` functions is a simple fix.  It turns out that the entire process of creating a database, loading data to a database and connecting `dplyr` is pretty simple.
 
 To start download the [Movie Lens Dataset](http://grouplens.org/datasets/movielens/).  The biggest version of this dataset is around 150 Mb -- not a large dataset by any means but an excellent example that should be easy to work with.
@@ -17,9 +16,9 @@ To start download the [Movie Lens Dataset](http://grouplens.org/datasets/moviele
 
 Install MySQL with homebrew on OS X:
 
-```
+{% highlight %}
 brew install mysql
-```
+{% endhighlight %}
 
 Install MySQL with apt on Ubuntu:
 
