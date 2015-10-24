@@ -169,7 +169,7 @@ LINES TERMINATED BY '\n';
 
 To make sure that the tables were created correctly and that data was loaded correctly we can look at the top 10 rows from each table:
 
-```
+{% highlight mysql %}
 SELECT * FROM movies
 LIMIT 10;
 
@@ -178,7 +178,7 @@ LIMIT 10;
 
 SELECT * FROM users
 LIMIT 10;
-```
+{% endhighlight %}
 
 # Loading MySQL into R
 
