@@ -184,7 +184,7 @@ LIMIT 10;
 
 Once the databases are created and the data is in the database correctly, from R install `dplyr` and `RMySQL`.  Then enter the following commands to connect `dplyr` to the databased just created:
 
-```
+```r
 library(dplyr)
 db = src_mysql('my_db_name', host = 'localhost', user='root', password='PASSWORD')
 
