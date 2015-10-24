@@ -42,7 +42,6 @@ Next, startup the MySQL Server and login:
 ```
 mysql.server start
 mysql -u root -p 'PASSWORD'
-
 ```
 
 #### Creating databases and tables
