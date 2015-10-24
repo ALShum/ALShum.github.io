@@ -16,15 +16,15 @@ To start download the [Movie Lens Dataset](http://grouplens.org/datasets/moviele
 
 Install MySQL with homebrew on OS X:
 
-```
+{% highlight r %}
 brew install mysql
-```
+{% endhighlight %}
 
 Install MySQL with apt on Ubuntu:
 
-```
+{% highlight r %}
 apt-get install mysql
-```
+{% endhighlight %}
 
 On other linux distributions and windows you are on your own.
 
@@ -32,16 +32,16 @@ On other linux distributions and windows you are on your own.
 
 Setup administrator -- in practice it might be better to make a new user rather than just using root.  From the terminal:
 
-```
+{% highlight r %}
 mysqladmin -u root password 'SET YOUR PASSWORD'
-```
+{% endhighlight %}
 
 Next, startup the MySQL Server and login:
 
-```
+{% highlight r %}
 mysql.server start
 mysql -u root -p 'PASSWORD'
-```
+{% endhighlight %}
 
 #### Creating databases and tables
 
@@ -49,18 +49,18 @@ Now you should be in the MySQL command line.  Create a database where the moviel
 
 List the databases available using:
 
-```
+{% highlight r %}
 show databases;
-```
+{% endhighlight %}
 
 Create database, select it, list the tables in the database and show all the columns from a table:
 
-```
+{% highlight r %}
 create database my_db_name;
 use my_db_name;
 show tables;
 show columns from TABLE_NAME;
-```
+{% endhighlight %}
 
 For a new database the tables and columns should be empty.
 
@@ -122,7 +122,7 @@ The columns are user id, gender, age, occupation and zipcode.
 
 The above datasets correspond to the tables created below:
 
-```
+{% highlight r %}
 CREATE TABLE movies ( 
 movie_id INT NOT NULL AUTO_INCREMENT, 
 title VARCHAR(255) NOT NULL, 
@@ -144,13 +144,13 @@ gender ENUM('m', 'f') NOT NULL,
 age INT NOT NULL, 
 occupation VARCHAR(50) NOT NULL, 
 zip VARCHAR(20) NOT NULL );
-```
+{% endhighlight %}
 
 #### Loading data into database
 
 Once the tables are created then to load the data from the text files:
 
-```
+{% highlight r %}
 LOAD DATA INFILE '/Users/MKULTRA/Downloads/ml-1m/movies.dat' 
 INTO TABLE movies 
 FIELDS TERMINATED BY '::' 
@@ -165,11 +165,11 @@ LOAD DATA INFILE '/Users/MKULTRA/Downloads/ml-1m/users.dat'
 INTO TABLE users 
 FIELDS TERMINATED BY '::' 
 LINES TERMINATED BY '\n';
-```
+{% endhighlight %}
 
 To make sure that the tables were created correctly and that data was loaded correctly we can look at the top 10 rows from each table:
 
-{% highlight mysql %}
+{% highlight r %}
 SELECT * FROM movies
 LIMIT 10;
 
