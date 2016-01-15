@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>An Introduction to reactive programming and shiny.</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<p>The following notes were written for the Honolulu R Users Group and presented November 18, 2015.</p>
+
+<h2>An Introduction to reactive programming and shiny.</h2>
+
+<h4>What is Shiny?</h4>
+
+<ul>
+<li>An R package for building interactive web applications.</li>
+<li>Open source.  Developed by R Studio.</li>
+<li>Rmarkdown and knitr are great but not interactive.</li>
+<li>Share data analysis without need for programming.</li>
+</ul>
+
+<h4>Motivation</h4>
+
+<ul>
+<li>Too much data to make simple overview plots.</li>
+<li>Models too complex for a few simple diagnostics.</li>
+<li>Working with non-R users.</li>
+<li>User facing applications built on top of R.</li>
+</ul>
+
+<h4>Examples</h4>
+
+<ul>
+<li><a href="https://gallery.shinyapps.io/Ebola-Dynamic/">https://gallery.shinyapps.io/Ebola-Dynamic/</a></li>
+<li>Graphics generated using ggplot2</li>
+<li>Slider controls feedback input to ggplot2</li>
+<li>Plots regenerate when controls change</li>
+</ul>
+
+<h4>How does it work?</h4>
+
+<ul>
+<li>Uses R as a backend for data.</li>
+<li>Use R data structures, R packages and R graphics.</li>
+<li>Front end built using HTML, Javascript and CSS.</li>
+<li>No HTML, Javascript or CSS knowledge necessary.</li>
+</ul>
+
+<h4>Advanced Options</h4>
+
+<ul>
+<li>Supports integration with D3.js.</li>
+<li>Support for many libraries built on top of D3.</li>
+<li>Dygraphs, leaflet, Google charts and others.</li>
+<li>Custom CSS and javascript.</li>
+</ul>
+
+<h4>Requirements</h4>
+
+<ul>
+<li>For running shiny code locally
+
+<ul>
+<li>R</li>
+<li>Shiny Package (on CRAN)</li>
+</ul></li>
+<li>For hosting web applications
+
+<ul>
+<li>Linux server</li>
+<li>Shiny-server software</li>
+</ul></li>
+</ul>
+
+<h4>Simple example User Interface</h4>
+
+<p>{% highlight r %}
+library(shiny)
+shinyUI(
+  fluidPage(
+    titlePanel(&ldquo;Hello World!&rdquo;),</p>
+
+<pre><code>sidebarPanel(
+  sliderInput(&quot;obs&quot;, 
+    &quot;Number of observations:&quot;, 
+    min = 1,
+    max = 1000, 
+    value = 500)
+),
+# Show a plot of the generated distribution
+mainPanel(
+  plotOutput(&quot;distPlot&quot;)
+)
+</code></pre>
+
+<p>)
+)
+{% endhighlight %}</p>
+
+<h4>Simple example Server Code</h4>
+
+<p>{% highlight r %}
+library(shiny)</p>
+
+<h1>Define server logic required to generate and plot a random distribution</h1>
+
+<p>shinyServer(
+  function(input, output) {
+    output$distPlot &lt;- renderPlot({
+      dist &lt;- rnorm(input$obs)
+      hist(dist)
+    })
+  }
+)
+{% endhighlight %}</p>
+
+<h4>Shiny design flow</h4>
+
+<ul>
+<li>User interface contained in <code>shinyUI</code> function &ndash; often in its own file: <code>ui.R</code>.</li>
+<li>Server logic contained inside <code>shinyServer</code> &ndash; often in its own file: <code>server.R</code>.</li>
+<li>User interface, takes user input and displays output.
+
+<ul>
+<li>Controls buttons, messages, menus etc.</li>
+<li>Can be built without any HTML, CSS or Javascript knowledge.</li>
+</ul></li>
+<li>Server function take input from UI and has full access to R packages.</li>
+</ul>
+
+<h4>Shiny design flow 2</h4>
+
+<ul>
+<li>New data entered from UI is automatically detected.</li>
+<li>New data prompts an internal update.</li>
+<li>All functions and plots using this data are regenerated.</li>
+<li>This is done automatically using reactively.</li>
+</ul>
+
+<h4>Reactive Programming</h4>
+
+<p>{% highlight r %}
+A = 100
+B = A + 1
+A = 200
+{% endhighlight %}</p>
+
+<p>What is the value of <code>B</code> at the end of this code segment?</p>
+
+<ul>
+<li>Normal R: <code>B == 101</code></li>
+<li>Reactive R: <code>B == 201</code></li>
+</ul>
+
+<h4>Shiny logic flow</h4>
+
+<ul>
+<li>Data input from &ldquo;Reactive Source&rdquo;
+
+<ul>
+<li>Typically user input from browser interface.</li>
+<li>Example: select an item, click a button, enter in a value.</li>
+</ul></li>
+<li>Data from &ldquo;Reactive Source&rdquo; processed using R
+
+<ul>
+<li>Take user input and run further calculations.</li>
+<li>Example: calculate summary statistics on user input data.</li>
+</ul></li>
+<li>Data output as &ldquo;Reactive endpoint&rdquo;
+
+<ul>
+<li>Reactive endpoint displays result to user.</li>
+<li>Example: Plot data after processing.</li>
+</ul></li>
+</ul>
+
+<h4>More complicated example</h4>
+
+<p>ui.R</p>
+
+<p>{% highlight r %}
+library(shiny)
+shinyUI(
+  fluidPage(
+    titlePanel(&ldquo;Weather Plotter&rdquo;),
+    column(4,
+      textInput(
+        inputId = &ldquo;location_id&rdquo;,
+        label = &ldquo;Enter location: &rdquo;,
+        value = &ldquo;California/San_Diego&rdquo;
+      ),
+      actionButton(
+        inputId = &ldquo;submit_loc&rdquo;,
+        label = &ldquo;Submit&rdquo;
+      )
+    ),
+    column(8,
+      dygraphs::dygraphOutput(&ldquo;dygraph1&rdquo;)
+    )
+  )
+)
+{% endhighlight %}</p>
+
+<h4>More complicated example</h4>
+
+<p>Server.R</p>
+
+<p>{% highlight r %}
+library(shiny)
+shinyServer(
+  function(input, output, session) {
+    rv_data = reactiveValues(
+      forecast_xts = NULL
+    )</p>
+
+<pre><code>observeEvent(
+  eventExpr = input[[&quot;submit_loc&quot;]],
+  handlerExpr = {
+    data = rwunderground::hourly10day(input[[&quot;location_id&quot;]])
+    data_temp = data[&quot;temp&quot;]
+    forecast_xts = xts::xts(data_temp, order.by = data$date)
+    rv_data$forecast_xts = forecast_xts
+  }
+)
+
+rct_get_data = reactive({
+  validate(
+    need(rv_data$forecast_xts, &quot;Please query data from server&quot;)
+  )
+  rv_data$forecast_xts
+})
+
+output[[&quot;dygraph1&quot;]] = renderDygraph({
+  dygraphs::dygraph(rct_get_data())
+})
+</code></pre>
+
+<p>}
+)
+{% endhighlight %}</p>
+
+<h4>Server and UI Design</h4>
+
+<ul>
+<li>UI does not contain any functions that process data.</li>
+<li>Server function has <code>input</code> and <code>output</code> parameters.
+
+<ul>
+<li>These are <code>reactiveValues</code> &ndash; lists of reactive types.</li>
+<li><code>input</code> is a reactiveValues list for data from the UI.</li>
+<li><code>output</code> is a reactiveValues list with plots and output for the UI.</li>
+</ul></li>
+</ul>
+
+<h4>Reactive Types</h4>
+
+<p>{% highlight r %}
+shinyServer(
+  function(input, output, session) {}
+{% endhighlight %}</p>
+
+<ul>
+<li>Reactive Source:
+
+<ul>
+<li><code>input</code>: <code>reactiveValues</code> list from UI</li>
+</ul></li>
+<li>Reactive Endpoint:
+
+<ul>
+<li><code>output</code>: <code>reactiveValues</code> list to UI</li>
+</ul></li>
+<li><code>Session</code> contains other metadata for shiny</li>
+</ul>
+
+<h4>Reactive Types</h4>
+
+<p>{% highlight r %}</p>
+
+<h1>from UI</h1>
+
+<p>textInput(
+    inputId = &ldquo;location_id&rdquo;,
+    label = &ldquo;Enter location: &rdquo;,
+    value = &ldquo;California/San_Diego&rdquo;
+  ),
+  actionButton(
+    inputId = &ldquo;submit_loc&rdquo;,
+    label = &ldquo;Submit&rdquo;
+  )
+{% endhighlight %}</p>
+
+<ul>
+<li>Reactive Source (from UI):
+
+<ul>
+<li>These will send values to the server from UI.</li>
+</ul></li>
+</ul>
+
+<h4>Reactive Types</h4>
+
+<p>{% highlight r %}</p>
+
+<h1>from UI</h1>
+
+<pre><code>column(8,
+  dygraphs::dygraphOutput(&quot;dygraph1&quot;)
+)
+</code></pre>
+
+<h1>from server</h1>
+
+<pre><code>output[[&quot;dygraph1&quot;]] = renderDygraph({
+  dygraphs::dygraph(rct_get_data())
+})
+</code></pre>
+
+<p>{% endhighlight %}</p>
+
+<ul>
+<li>Reactive end points
+
+<ul>
+<li>The reactive endpoint code in UI will have corresponding code in server.</li>
+</ul></li>
+</ul>
+
+<h4>Reactive Types</h4>
+
+<p>{% highlight r %}
+    rct_get_data = reactive({
+      validate(
+        need(rv_data$forecast_xts, &ldquo;Please query data from server&rdquo;)
+      )
+      print(&ldquo;test&rdquo;)
+      rv_data$forecast_xts
+    })
+{% endhighlight %}
+Reactive Conductor:</p>
+
+<ul>
+<li><code>rct_get_data</code>: <code>reactive</code> is a type of reactive function.<br/></li>
+<li>This function will run any time any of the reactive expressions inside the function change.</li>
+<li>In above example, this will detect when new time series data is available, validate the data and return it.</li>
+</ul>
+
+<h4>Reactive Types</h4>
+
+<p>{% highlight r %}
+    observeEvent(
+      eventExpr = input[[&ldquo;submit_loc&rdquo;]],
+      handlerExpr = {
+        data = rwunderground::hourly10day(input[[&ldquo;location_id&rdquo;]])
+        data_temp = data[&ldquo;temp&rdquo;]
+        forecast_xts = xts::xts(data_temp, order.by = data$date)
+        rv_data$forecast_xts = forecast_xts
+      }
+    )
+{% endhighlight %}
+Reactive Observers:</p>
+
+<ul>
+<li>Similar to <code>reactive</code> functions but they are not a function and thus have no return output.<br/></li>
+<li>Good way to update a reactiveValue based on a trigger (in this case button push).</li>
+</ul>
+
+<h4>Final Notes</h4>
+
+<ul>
+<li>Reactive values must be handled in a &ldquo;reactive context&rdquo;.
+
+<ul>
+<li>Reactive contexts include observers, reactive functions and reactive end points.</li>
+</ul></li>
+<li>Helper functions and objects can be defined outside of shiny.
+
+<ul>
+<li>These functions will run once when the server first starts.</li>
+</ul></li>
+<li>Reactive code will rerun whenever the input changes.</li>
+</ul>
+
+<h4>Input Controls</h4>
+
+<ul>
+<li>Support for text/numeric input, sliders, checkboxes, drop down menus, multi-selection</li>
+<li>See gallery: <a href="http://shiny.rstudio.com/gallery/widget-gallery.html">http://shiny.rstudio.com/gallery/widget-gallery.html</a></li>
+</ul>
+
+<h4>Output Display Types</h4>
+
+<ul>
+<li>Support for the following output types: text, image, plots, tables.</li>
+<li>Example of data table: <a href="http://shiny.rstudio.com/articles/datatables.html">http://shiny.rstudio.com/articles/datatables.html</a></li>
+</ul>
+
+</body>
+
+</html>
