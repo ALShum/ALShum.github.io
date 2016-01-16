@@ -1,0 +1,90 @@
+Alex Shum
+==============================
+alex@alshum.com
+www.ALShum.com
+==============================
+
+------------------------------
+Professional Experience
+------------------------------
+** Schneider Electric SE (Remote)
+  - Sept 2015 - Present
+  ** Data Scientist
+    -Primary R/Shiny developer for machine learning web applications.
+    -Integrated backend RESTful data services to front end within R/Shiny.
+    -Designed, prototyped, developed and unit tested machine learning applications related to fault detection, forecasting and time series predictions.
+    -Data visualization of time series data.
+    -Performed regular code reviews
+
+** Kingland Systems (Ames, IA)
+  -Jan 2015 - Aug 2015
+  ** Research Assistant / Statistician
+    -Predict software defect rates using machine learning.
+    -Generalized linear models to model software engineering process variance.
+    -Explained statistical concepts to non-technical audience.
+    -Advised management on data cleaning, collection and experimental design.
+
+** Schneider Electric SE (Cedar Rapids, IA)
+  -May 2014 - Aug 2014 and May 2015 - Aug 2015
+  ** Data Science Intern
+    -Machine learning to predict equipment malfunctions.
+    -Built data visualization front end for time series data.
+    -Created an R package to interface with internal API server.
+    -Authored an online course for statistics in R, Markdown, Jekyll and Shiny.
+    -Visualized internal company datasets using R, ggplot2, ggvis.
+    -ANOVA gauge R&R to model engineering process variation.
+
+** Iowa State University (Ames, IA)
+  -Aug 2012 - Dec 2014
+  ** Teaching Assistant and Instructor
+    -Primary instructor for Introduction to Statistics.
+      Responsible for exams and lectures for over 90 undergraduate students.
+      Prepared lecture materials, quizzes, midterms and finals.
+    -Lab assistant for Business Statistics, Probability for Computer Science, Statistical Methods.
+      Responsible for lab sections, grading and helping undergrad students.
+
+** University of Hawaii (Honolulu, HI)
+  -Jan 2010 - May 2012
+  ** Graduate Research Assistant and Tutor/Grader
+    -Mathematical modeling and algorithm development in Mathematica.
+    -Constructed and validated game theory models related to coalition formation.
+    -Tutored students in calculus, linear algebra and differential equations.
+
+** Hawaii National Bank (Honolulu, HI)
+  -Dec 2008 - Jan 2010
+  ** Credit Analyst
+    -Analyzed profit and loss statements and cash flow.
+    -Authored reports about financial status of small businesses.
+
+------------------------------
+Skills
+------------------------------
+** Data Science and Programming (Github: http://www.github.com/ALShum)
+  ** Expert: R, Java, Shiny, ggplot2, knitr, rmarkdown, Git
+  ** Basic: SQL, Hadoop, C, C++, Julia, Matlab, Mathematica, SAS, Javascript.
+** Open Source Contributions (available on CRAN)
+  ** rwunderground: R package to get historical and forecast weather data.
+      - Available at https://cran.r-project.org/web/packages/rwunderground/
+  ** hashids: R package to generate YouTube-like hashes from integer vectors.
+      - Available at https://cran.r-project.org/web/packages/hashids/
+
+------------------------------
+Awards
+------------------------------
+** 2015 Prudsys International Data Mining Cup 2nd/3rd place (out of 188 teams)
+  - Competition to predict coupon usage for large online retailer.
+  - Used adaboost/random forest for variable selection, LASSO for predictions.
+** 2014 UseR! Data Visualization contest winning team.
+  - Visualized OECD education data on topics of inequity.
+
+------------------------------
+Education
+------------------------------
+** Iowa State University (Ames, IA)
+  ** PhD, Statistics: 2014 - 2015 (currently on hiatus).
+  ** MS, Statistics: 2012 - 2014
+** University of Hawaii (Honolulu, HI)
+  ** Graduate Coursework in Math/Computer Science: 2010 - 2012
+** University of Puget Sound (Tacoma, WA)
+  ** BA, Economics: 2004 - 2008
+

@@ -9,7 +9,7 @@ image:
   creditlink: https://www.flickr.com/photos/110510665@N05/
 ---
 
-[CV/Resume](/images/other/Shum_net.pdf)
+[CV/Resume](/images/other/shum,alex.txt)
 
 ### Bio
 I'm a PhD student in statistics at Iowa State University.  My interests are in machine learning, data mining, computational statistics, and data visualization.  Before I came to Iowa State University, I was briefly in the math program at the University of Hawaii at Manoa.  
