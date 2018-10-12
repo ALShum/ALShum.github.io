@@ -6,7 +6,7 @@ url:              http://www.alshum.com
 owner:
   name:           Alex Shum
   avatar:         bio-photo.jpg
-  bio:            "PhD Student in statistics at Iowa State University."
+  bio:            "Data Scientist at Apple."
   email:          ashum @ iastate . edu
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter: NotAlexShum
@@ -32,7 +32,7 @@ links:
   - title: Links
     url: /links/
   - title: google
-    url: http://www.google.com
+    url: http://www.google.com/
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
