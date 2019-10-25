@@ -9,10 +9,10 @@ image:
   creditlink: https://www.flickr.com/photos/110510665@N05/
 ---
 
-[CV/Resume](/images/other/shum,alex.txt)
+[CV/Resume](oops,you_should_email_me_instead)
 
 ### Bio
-I'm a PhD student in statistics at Iowa State University.  My interests are in machine learning, data mining, computational statistics, and data visualization.  Before I came to Iowa State University, I was briefly in the math program at the University of Hawaii at Manoa.  
+I'm a PhD student in statistics at Iowa State University.  My interests are in machine learning, data mining, computational statistics, and data visualization.  Before I came to Iowa State University, I was briefly in the math program at the University of Hawaii at Manoa.
 
 ### Hobbies and interests
 I like programming and [puzzles](http://projecteuler.net).  I think sudokus are awesome; I always try to write a sudoku solver in languages I'm learning.  I've previously written a sudoku solver in Java, R, C, Julia and Matlab.  Sometimes I also answer questions on [stackoverflow](http://stackoverflow.com/users/3738857/divide-by-zero)
@@ -24,8 +24,6 @@ My [github](http://www.github.com/ALShum) has some of what I'm currently working
 [List of books](http://amzn.com/w/2J5XOKS2XTJT7) that are on my list to read eventually.
 
 ### Contact
-Email is the best way to contact me: 
+Email is the best way to contact me:
 
-alex -AT- ALShum.com 
-
-ashum -AT- iastate.edu
+alex -AT- ALShum.com
